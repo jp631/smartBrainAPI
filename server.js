@@ -19,7 +19,7 @@ const app = express();
    client: 'pg',
    connection: {
     connectionString : process.env.DATABSE_URL,
-     ssl: true
+     ssl: false
    }
  });
 
