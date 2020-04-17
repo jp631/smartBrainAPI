@@ -29,7 +29,7 @@ const app = express();
  });
 
 app.get("/", (req, res) => {
-  res.json(database.users);
+  res.json("loading");
   res.send("The server is working!");
 })
 
@@ -100,7 +100,7 @@ db("users").where("id", "=", id)
 ///////
 
 if(PORT == null || PORT == ""){
-  PORT = 8000
+  PORT = 8000;
 }
 app.listen(PORT || 3000, () => {
   console.log(`app is running on port ${PORT}`);
