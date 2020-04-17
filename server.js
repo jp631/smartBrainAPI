@@ -17,7 +17,7 @@ const app = express();
    const db = knex({
    client: 'pg',
    connection: {
-     host : '127.0.0.1',
+     host : 'postgresql-opaque-64850',
      user : 'jpdeveloper',
      password : '',
      database : 'smart-brain'
@@ -100,7 +100,7 @@ db("users").where("id", "=", id)
 ///////
 
 if(PORT == null || PORT == ""){
-  PORT = 8000;
+  PORT = 8000
 }
 app.listen(PORT || 3000, () => {
   console.log(`app is running on port ${PORT}`);
