@@ -57,7 +57,7 @@ app.post("/signIn", (req, res) => {
       })
     })
 
-app.post("/register", (req, res) => {register.handleRegister(req, res, db, bcrypt)})
+app.post("/register", (req, res) => {register.handleRegister(req, res, db, bcrypt)});
 
 app.get("/profile/:id", (req, res) => {
   const { id } = req.params;
