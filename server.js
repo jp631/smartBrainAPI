@@ -28,7 +28,6 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.json("loading");
-  res.send("The server is working!");
 })
 
 app.post("/signIn", (req, res) => {
