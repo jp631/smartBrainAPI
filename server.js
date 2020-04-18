@@ -4,9 +4,10 @@ const cors = require("cors");
 const knex = require("knex");
 const register = require("./register")
 const  clarifai = require('clarifai');
-process.env.MODE_ITS_REJECT_UNAUTHORIZED = 0; // this line fixed the error -Error: self signed certificate-"
 
 let PORT = process.env.PORT;
+process.env.MODE_ITS_REJECT_UNAUTHORIZED = 0; // this line fixed the error -Error: self signed certificate-"
+
 const app = express();
  app.use(express.json());
  app.use(cors());
