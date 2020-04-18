@@ -4,7 +4,7 @@ const cors = require("cors");
 const knex = require("knex");
 const register = require("./register")
 const  clarifai = require('clarifai');
-process.env.MODE_ITS_REJECT_UNAUTHORIZED = 0;
+//process.env.MODE_ITS_REJECT_UNAUTHORIZED = 0;
 
 let PORT = process.env.PORT;
 const app = express();
@@ -18,7 +18,8 @@ const app = express();
    const db = knex({
    client: 'pg',
    connection: {
-    connectionString : process.env.DATABSE_URL
+    connectionString : process.env.DATABASE_URL,
+    ssl: true
    }
  });
 
